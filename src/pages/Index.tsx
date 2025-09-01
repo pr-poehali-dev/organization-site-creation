@@ -2,6 +2,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Icon from '@/components/ui/icon';
+import FeedbackForm from '@/components/FeedbackForm';
+import { Toaster } from '@/components/ui/toaster';
 
 export default function Index() {
   const sections = [
@@ -216,6 +218,11 @@ export default function Index() {
               </CardContent>
             </Card>
           </div>
+          
+          {/* Форма обратной связи */}
+          <div className="mt-12">
+            <FeedbackForm />
+          </div>
         </div>
       </section>
 
@@ -252,6 +259,7 @@ export default function Index() {
           </div>
         </div>
       </footer>
+      <Toaster />
     </div>
   );
 }
